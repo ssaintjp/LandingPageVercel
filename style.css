@@ -195,7 +195,7 @@ header .logo img {
   justify-content: center;     
   align-items: center;         
   text-align: center;          
-  padding: 5rem;
+  padding: 4.9rem;
   margin-top: -5rem; /* Reduz a distância entre a hero e os logotipos */
 }
 .hero-content {
@@ -232,7 +232,7 @@ header .logo img {
 .btn-primary{
   background:#0056FF;
   color:#fff;
-  padding:.75rem 2rem;
+  padding:.70rem 2rem;
   border-radius: 30px;
   text-decoration: none;
 }
@@ -255,7 +255,7 @@ header .logo img {
 
   border-style: solid;
   border-color: #A366FF;
-  padding:.75rem 2rem;
+  padding:.69rem 2rem;
   border-radius: 30px;
 }
 
@@ -263,14 +263,15 @@ header .logo img {
 
 color:#ffffff;
 }
-.hero-image img{max-width:500px;width:100%}
+.hero-image img{max-width:500px;
+  width:100%}
 
 
 
 /* ----- SECTIONS ----- */
 .video-section h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .video-container {
@@ -318,12 +319,12 @@ color:#ffffff;
 
 /* Estilos para as seções de cases */
 .ferramenta-case {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: #f9f9ff;
 }
 
 .case-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 0.5rem;
   color: #111;
@@ -333,14 +334,14 @@ color:#ffffff;
   text-align: center;
   font-size: 1.2rem;
   color: #555;
-  margin-bottom: 2rem;
+  margin-bottom: 1.9rem;
 }
 
 .case-divider {
   width: 100px;
   height: 3px;
   background: linear-gradient(90deg, #0056FF, #A366FF);
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   border-radius: 3px;
 }
 
@@ -352,13 +353,13 @@ color:#ffffff;
 }
 
 .case-text h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #0056FF;
   margin-bottom: 0.5rem;
 }
 
 .case-text h4 {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   color: #111;
   margin-bottom: 1.5rem;
   font-weight: 500;
@@ -368,12 +369,12 @@ color:#ffffff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin: 1.8rem 0;
 }
 
 .stat-item {
   background: #fff;
-  padding: 1.5rem;
+  padding: 1.4rem;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   text-align: center;
@@ -427,22 +428,127 @@ color:#ffffff;
 
 /* Responsividade */
 @media (max-width: 992px) {
-  .case-content {
-    grid-template-columns: 1fr;
+  .container {
+    padding: 1rem;
   }
-  
+
+  .hero-content {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .case-content {
+    grid-template-columns: 1fr; /* Empilha os elementos */
+    gap: 2rem;
+  }
+
   .case-video {
-    order: -1;
+    order: -1; /* Move o vídeo para cima */
+  }
+
+  .ferramentas-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
   }
 }
 
 @media (max-width: 768px) {
-  .case-title {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ferramentas-grid {
+    grid-template-columns: 1fr; /* 1 coluna */
+  }
+
+  .case-content {
+    flex-direction: column; /* Empilha os elementos */
+    text-align: center;
+  }
+
+  .case-video video {
+    width: 100%;
+    height: auto;
+  }
+
+  .case-text {
+    text-align: center;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Responsividade para telas menores que 576px */
+@media (max-width: 576px) {
+  .hero-content h1 {
     font-size: 2rem;
   }
-  
-  .case-stats {
-    grid-template-columns: 1fr;
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .case-title {
+    font-size: 1.8rem;
+  }
+
+  .case-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .case-text p {
+    font-size: 0.9rem;
+  }
+
+  .ferramenta-card {
+    padding: 2rem 1rem;
+  }
+
+  .footer-column h3 {
+    font-size: 1rem;
+  }
+
+  .footer-column p,
+  .footer-column ul li {
+    font-size: 0.8rem;
   }
 }
 
@@ -490,21 +596,58 @@ color:#ffffff;
 }
 
 
-.carousel{position:relative;overflow:hidden;width:100%}
-.carousel-track{display:flex;transition:transform .6s ease}
-.project-card{width:360px;flex:0 0 360px;margin-right:32px;padding:1rem;background:#fff;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.05)}
-.project-card:last-child{margin-right:0}
-.project-card img{width:100%;border-radius:4px}
-.project-card h3{margin:1rem 0 .5rem;font-size:1.1rem}
+.carousel{
+  position:relative;
+  overflow:hidden;
+  width:100%
+}
+.carousel-track{
+  display:flex;
+  transition:transform .6s ease
+}
+.project-card{
+  width:360px;
+  flex:0 0 360px;
+  margin-right:31px;
+  padding:0.9rem;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,.05)
+}
+.project-card:last-child{
+  margin-right:0
+}
+.project-card img{
+  width:100%;
+  border-radius:4px
+}
+.project-card h3
+{margin:0.9rem 0 .3rem;
+  font-size:1.1rem
+}
 
-.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:2.25rem;height:2.25rem;font-size:1.5rem;background:#0056FF;color:#fff;border:none;border-radius:50%;cursor:pointer;z-index:5}
-.carousel-btn.prev{left:.5rem}
-.carousel-btn.next{right:.5rem}
+.carousel-btn{position:absolute;
+  top:50%;transform:translateY(-50%);
+  width:2.25rem;
+  height:2.25rem;
+  font-size:1.5rem;
+  background:#0056FF;
+  color:#fff;
+  border:none;
+  border-radius:50%;
+  cursor:pointer;
+  z-index:5
+}
+.carousel-btn.prev{
+  left:.5rem}
+.carousel-btn.next{
+  right:.5rem}
 
 /* ----- FAQ ----- */
 .faq .container{
   flex-direction:column;
   align-items:center
+  
 }
 
 .faq details {
@@ -512,6 +655,7 @@ color:#ffffff;
   max-width: 600px;
   text-align: center;
   overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
+  display: flex;
 }
 
 .faq details[open] p {
@@ -540,11 +684,39 @@ color:#ffffff;
 
 
 /* ----- CONTATO ----- */
-.contato .container{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
-.contato h2{grid-column:1/-1;justify-self:center}
-.contato form{display:grid;gap:1rem}
-.contato input,.contato textarea{width:100%;padding:.75rem;border:1px solid #ccc;border-radius:4px;font-family:inherit}
-.contato button{padding:.75rem;border:none;border-radius:4px;background:#0056FF;color:#fff;font-weight:500;cursor:pointer;transition:background .2s}
+.contato .container{
+  display:flex;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+  align-items:center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.contato h2{
+ 
+  justify-content:center;
+  width: 100%;
+  height: 20px;
+}
+.contato form{
+  display:grid;
+  gap:1rem}
+.contato input,.contato textarea{
+  max-width: 1200px;
+  width: 40rem;
+  padding:.75rem;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-family:inherit}
+.contato button{padding:.75rem;
+  border:none;border-radius:10px;
+  background:#0056FF;
+  color:#fff;
+  font-weight:500;
+  cursor:pointer;
+  transition:background .2s
+}
 .contato button:hover{background:#004ae6}
 
 
@@ -858,19 +1030,21 @@ margin-top: 3rem;
   }
 
   .footer {
-    background: #111;
-    color: #eee;
+    background: #fbfbfb;
+    color: #3f3f3f;
     padding: 3rem 2rem 2rem;
     font-size: 0.9rem;
   }
   
   .footer a {
-    color: #eee;
+    color: #1a1a1a;
     text-decoration: none;
+    transition: color 0.3s;
   }
   
   .footer a:hover {
     color: #A366FF;
+    transition: color 0.3s;
   }
   
   .footer-grid {
@@ -889,7 +1063,7 @@ margin-top: 3rem;
   .footer-column h3 {
     margin-bottom: 1rem;
     font-size: 1.2rem;
-    color: #fff;
+    color: #282828;
   }
   
   .footer-column ul {
@@ -911,7 +1085,7 @@ margin-top: 3rem;
     padding-top: 1rem;
     text-align: center;
     font-size: 0.8rem;
-    color: #aaa;
+    color: #2c2c2c;
   }
   
   .social-icons a {
@@ -922,7 +1096,7 @@ margin-top: 3rem;
   }
   
   .social-icons a:hover {
-    color: #A366FF;
+    color: #3860ff;
   }
 
   
@@ -954,7 +1128,7 @@ margin-top: 3rem;
   
   .footer-column .social-icons a {
     font-size: 1rem; /* Ajusta o tamanho do texto */
-    color: #eee;
+    color: #3d3d3d;
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -1108,6 +1282,17 @@ margin-top: 3rem;
   width: 100%;
 }
 
+.case2 {
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: -10rem;
+  color: #111;
+  line-height: 4rem;
+  height: 20rem;
+  width: 100%;
+}
+
 .case-content {
   display: flex;
   align-items: center;
@@ -1133,6 +1318,7 @@ margin-top: 3rem;
 }
 
 .case-text h1 {
+  font-weight: 300;
   text-align: left;
   font-size: 2rem;
   color: #272727;
@@ -1179,6 +1365,7 @@ margin-top: 3rem;
 }
 
 .case-text2 h1 {
+  font-weight: 300;
   text-align: left;
   font-size: 2rem;
   color: #272727;
@@ -1196,7 +1383,6 @@ margin-top: 3rem;
 }
 
 /*case 3*/
-
 
 .case-content3 {
   display: flex;
@@ -1239,50 +1425,58 @@ margin-top: 3rem;
 }
 
 /* case 4*/
+.assistentes {
+  font-weight: 300;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+  line-height: 4rem;
+  width: 100%;
+  height: 15rem;
+  
 
-.cases {
-  padding: 4rem 3rem;
 }
 
 .case-content4 {
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  flex-direction: center; /* Inverte a ordem para texto à direita e vídeo à esquerda */
+  gap: 2rem; /* Espaçamento entre a imagem e o texto */
+  text-align: center;
+  margin-top: 2rem; /* Adiciona margem superior */
+
 }
 
-.case-video4 {
-  flex: 1;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
+.case-image4 img {
+  max-width: 300px; /* Define um tamanho máximo para a imagem */
+  width: 100%; /* Garante que a imagem seja responsiva */
+  border-radius: 40px; /* Mantém as bordas arredondadas */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  height: 30pc;
 
-.case-video4 video {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
 }
 
 .case-text4 {
-  flex: 1;
-  text-align: left;
+  max-width: 430px; /* Define uma largura máxima para o texto */
+  text-align: left; /* Alinha o texto à esquerda */
 }
 
 .case-text4 h1 {
-  text-align: left;
+  font-weight: 300;
   font-size: 2rem;
   color: #272727;
   margin-bottom: 1rem;
+
+  
 }
 
 .case-text4 p {
-  text-align: left;
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
-  max-width: 35rem;
-  margin-left: 0.1rem;
-  
+  text-align: justify;
 }
 
 /* Aumentar a distância entre os cases */
