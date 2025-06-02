@@ -179,7 +179,8 @@ header .hamburguer {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1; /* Faz a nav ocupar o espaço central */
+  flex: 1;
+  margin-left: 5rem; /* Desloca levemente para a direita */
 }
 
 .nav ul {
