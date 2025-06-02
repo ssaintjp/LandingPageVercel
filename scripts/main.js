@@ -217,3 +217,11 @@ function type() {
 }
 
 document.addEventListener("DOMContentLoaded", type);
+
+const hamburguer = document.getElementById("hamburguer");
+const navLinks = document.querySelector(".nav-links");
+
+hamburguer.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
