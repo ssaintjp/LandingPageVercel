@@ -134,12 +134,13 @@ header {
 
 header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
+  gap: 2rem; /* Adiciona espaçamento entre os itens */
 }
 
 header :hover{
@@ -147,7 +148,7 @@ header :hover{
 }
 
 header .logo {
-  flex: 1;
+  /* Remova flex: 1 */
   text-align: left;
 }
 
@@ -175,12 +176,10 @@ header .hamburguer {
 }
 
 .nav {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: auto;
+  flex: 1; /* Faz a nav ocupar o espaço central */
 }
 
 .nav ul {
